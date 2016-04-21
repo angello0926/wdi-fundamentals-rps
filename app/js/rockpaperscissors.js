@@ -22,21 +22,60 @@ function randomPlay() {
 ////////////////////////////////////////////////
 
 function getPlayerMove(move) {
-    // Write an expression that operates on a variable called `move`
-    // If a `move` has a value, your expression should evaluate to that value.
+    var move;// Write an expression that operates on a variable called `move`
+    if (move!=null){
+       move=prompt();}
+    else  if (move===null){
+        move=getInput();}// If a `move` has a value, your expression should evaluate to that value.
     // However, if `move` is not specified / is null, your expression should equal `getInput()`.
-    return /* Your Expression */;
+    return ("Your move is" + move);
 }
 
 function getComputerMove(move) {
-    // Write an expression that operates on a variable called `move`
-    // If a `move` has a value, your expression should evaluate to that value.
+    var move;// Write an expression that operates on a variable called `move`
+    if (move!=null){
+       move=prompt();}
+    else  if (move===null){
+        move=randomP}// If a `move` has a value, your expression should evaluate to that value.
     // However, if `move` is not specified / is null, your expression should equal `randomPlay()`.
-    return /* Your Expression */;
+    return ("The compuer's move is"+ move);
 }
 
 function getWinner(playerMove,computerMove) {
     var winner;
+    if (playerMove===computerMove){
+        return "tie";
+    
+    }
+    
+    else if (computerMove==="rock"){
+        
+        if (playerMove==="scissors"){
+            return "Computer wins!";
+        }
+          else if (playerMove==="paper"){
+              return "player wins!"
+          }
+     }
+    
+     else if (computerMove==="scissors")
+        {if (playerMove==="paper"){
+            return "Computer wins!";
+        }
+          else if (playerMove==="rock"){
+              return "player wins!"
+          }
+        }
+    
+     else if (computerMove==="paper")
+        {if (playerMove==="rock"){
+            return "Computer wins!";
+        }
+          else if (playerMove==="scissors"){
+              return "player wins!"
+          }
+        }
+    
     // Write code that will set winner to either 'player', 'computer', or 'tie' based on the values of playerMove and computerMove.
     // Assume that the only values playerMove and computerMove can have are 'rock', 'paper', and 'scissors'.
     // The rules of the game are that 'rock' beats 'scissors', 'scissors' beats 'paper', and 'paper' beats 'rock'.
